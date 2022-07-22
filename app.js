@@ -1,0 +1,17 @@
+"use strict";
+exports.__esModule = true;
+var Products_1 = require("./Products");
+var ProductService_1 = require("./ProductService");
+var _productService = new ProductService_1.ProductService();
+var result1;
+result1 = _productService.getById(2);
+console.log(result1);
+var value1 = _productService.generateId();
+var a = new Products_1.Product(value1, "lenova", "laptop", 1350);
+var result2 = _productService.saveProduct(a);
+var value2 = _productService.generateId();
+var b = new Products_1.Product(value2, "samsung t87", "tv", 4000);
+var result3 = _productService.saveProduct(b);
+var result4 = _productService.deleteProduct(result1);
+var result5 = _productService.getProducts();
+console.log(result5);
